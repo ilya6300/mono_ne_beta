@@ -1,0 +1,346 @@
+.cell-1-start,
+.cell-10,
+.cell-19,
+.cell-28 {
+  position: relative;
+  cursor: pointer;
+  width: 13.2vh;
+  height: 13.2vh;
+  /* border: 1px solid; */
+}
+.cell-2,
+.cell-3,
+.cell-4,
+.cell-5,
+.cell-6,
+.cell-7,
+.cell-8,
+.cell-9,
+.cell-20,
+.cell-21,
+.cell-22,
+.cell-23,
+.cell-24,
+.cell-25,
+.cell-26,
+.cell-27,
+.card-top-bottom-container,
+.card-top-bottom {
+  background: rgb(252, 255, 255);
+  cursor: pointer;
+  width: 9.1vh;
+  height: 13.2vh;
+  border: 1px solid;
+}
+
+/* Левые и правые клетки */
+.card-left-right-container {
+  /* z-index: 1; */
+  position: relative;
+  background: rgb(252, 255, 255);
+  cursor: pointer;
+  width: 13.2vh;
+  height: 9.1vh;
+  border: 1px solid;
+}
+.cell11,
+.cell12,
+.cell13,
+.cell14,
+.cell15,
+.cell16,
+.cell17,
+.cell18 {
+  background: rgb(252, 255, 255);
+  cursor: pointer;
+  width: 13.2vh;
+  height: 9.1vh;
+}
+.card-left {
+  border: 1px solid;
+  background: rgb(252, 255, 255);
+  position: absolute;
+  left: 1.9vh;
+  top: -2.2vh;
+  transform: rotate(270deg);
+  width: 9.1vh;
+  height: 13.2vh;
+}
+
+.card-right {
+  border: 1px solid;
+  background: rgb(252, 255, 255);
+  position: absolute;
+  margin: 0;
+  left: 1.9vh;
+  top: -2.2vh;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+  width: 9.1vh;
+  height: 13.2vh;
+}
+
+.cell-name {
+  height: 21%;
+  /* background: rgb(71, 173, 204); */
+  text-align: center;
+  padding-top: 5%;
+  border-radius: 4px 4px 0 0;
+  font-size: calc(4px + 0.5vh);
+  line-height: 1vh;
+  font-weight: 500;
+}
+#cell-2 .cell-name,
+#cell-3 .cell-name,
+#cell-5 .cell-name {
+  background: rgb(71, 173, 204);
+}
+#cell-2 .cell-unit--bonus,
+#cell-3 .cell-unit--bonus,
+#cell-5 .cell-unit--bonus {
+  border-top: 1px solid rgb(71, 173, 204);
+}
+#cell-6 .cell-name,
+#cell-8 .cell-name,
+#cell-9 .cell-name {
+  background: rgb(211 137 230);
+}
+#cell-6 .cell-unit--bonus,
+#cell-8 .cell-unit--bonus,
+#cell-9 .cell-unit--bonus {
+  border-top: 1px solid rgb(211 137 230);
+}
+#cell-11 .cell-name,
+#cell-13 .cell-name {
+  background: rgb(203 142 45);
+}
+#cell-11 .cell-unit--bonus,
+#cell-13 .cell-unit--bonus {
+  border-top: 1px solid rgb(203 142 45);
+}
+#cell-15 .cell-name,
+#cell-16 .cell-name,
+#cell-18 .cell-name {
+  background: rgb(255 92 0 / 91%);
+}
+#cell-15 .cell-unit--bonus,
+#cell-16 .cell-unit--bonus,
+#cell-18 .cell-unit--bonus {
+  border-top: 1px solid rgb(255 92 0 / 91%);
+}
+#cell-20 .cell-name,
+#cell-21 .cell-name,
+#cell-23 .cell-name {
+  background: rgb(227 232 23 / 93%);
+}
+#cell-20 .cell-unit--bonus,
+#cell-21 .cell-unit--bonus,
+#cell-23 .cell-unit--bonus {
+  border-top: 1px solid rgb(227 232 23 / 93%);
+}
+#cell-25 .cell-name,
+#cell-26 .cell-name,
+#cell-27 .cell-name {
+  background: rgb(60 215 7 / 93%);
+}
+#cell-25 .cell-unit--bonus,
+#cell-26 .cell-unit--bonus,
+#cell-27 .cell-unit--bonus {
+  border-top: 1px solid rgb(60 215 7 / 93%);
+}
+#cell-29 .cell-name,
+#cell-30 .cell-name,
+#cell-32 .cell-name {
+  background: rgb(215 7 7 / 93%);
+}
+#cell-29 .cell-unit--bonus,
+#cell-30 .cell-unit--bonus,
+#cell-32 .cell-unit--bonus {
+  border-top: 1px solid rgb(215 7 7 / 93%);
+}
+#cell-34 .cell-name,
+#cell-36 .cell-name {
+  background: rgb(0 74 240 / 94%);
+}
+#cell-34 .cell-unit--bonus,
+#cell-36 .cell-unit--bonus {
+  border-top: 1px solid rgb(0 74 240 / 94%);
+}
+#cell-4 .cell-name {
+  /* border-bottom: 1px solid; */
+  margin-bottom: 2px;
+}
+#cell-4 .cell-unit--bonus {
+  border-top: 1px solid black;
+    line-height: 90%;
+}
+.cell-master,
+#cell-master {
+  height: 10%;
+  /* border-bottom: 1px solid; */
+  font-size: calc(3px + 0.3vh);
+  padding: 3% 0 15% 0%;
+  font-weight: 600;
+}
+#cell-21-unit,
+#cell-20-unit,
+#cell-13-unit,
+#cell-11-unit,
+#cell-5-unit,
+#cell-3-unit,
+#cell-2-unit,
+#cell-29-unit,
+#cell-30-unit,
+#cell-32-unit,
+#cell-23-unit {
+  display: inline-block;
+  background: url(../img/NPS/b1.jpg) no-repeat;
+  height: 4.8vh;
+  width: 4vh;
+  background-size: cover;
+  margin: 0 0 0 0.2vh;
+}
+#cell-9-unit,
+#cell-8-unit,
+#cell-6-unit,
+#cell-15-unit,
+#cell-16-unit,
+#cell-18-unit,
+#cell-25-unit,
+#cell-26-unit,
+#cell-27-unit,
+#cell-34-unit,
+#cell-36-unit {
+  display: inline-block;
+  background: url(../img/NPS/b2.png) no-repeat;
+  height: 4.8vh;
+  width: 4vh;
+  background-size: cover;
+  margin: 0 0 0 0.2vh;
+}
+#cell-10 img {
+  position: absolute;
+  top: 3.5vh;
+  height: 8vh;
+  width: 8vh;
+  background-size: cover;
+  margin-left: 2.5vh;
+}
+
+.cell-unit-container {
+  /* height: 3vh; */
+}
+.cell-unit-container--stat {
+  display: inline-block;
+  width: 4vh;
+  height: 3vh;
+  line-height: 1.8vh;
+}
+.cell-unit-container--stat---attack---icon {
+  display: inline-block;
+  width: 1.25vh;
+  height: 1.25vh;
+  margin-left: 8%;
+  background: url(../img/icon/attack.png) no-repeat;
+  background-size: cover;
+
+}
+.cell-unit-container--stat---attack---stat {
+  display: inline-block;
+  width: 1.2vh;
+  padding-bottom: -50%;
+  font-size: calc(7px + 0.5vh);
+  font-weight: 600;
+  text-align: end;
+}
+.cell-unit-container--stat---hp---icon {
+  display: inline-block;
+  width: 1.25vh;
+  height: 1.25vh;
+  margin-left: 8%;
+  background: url(../img/icon/hp.png) no-repeat;
+  background-size: cover;
+
+}
+.cell-unit-container--stat---hp---stat {
+  display: inline-block;
+  width: 1.2vh;
+  font-size: calc(7px + 0.5vh);
+  font-weight: 600;
+  text-align: end;
+}
+.cell-unit-container--stat---authority---icon {
+  display: inline-block;
+  width: 1.1vh;
+  height: 1.2vh;
+  margin-left: 8%;
+  background: url(../img/icon/authority.png) no-repeat;
+  background-size: cover;
+}
+.cell-unit-container--stat---authority---stat {
+  display: inline-block;
+  width: 1.2vh;
+  font-size: calc(7px + 0.5vh);
+  font-weight: 600;
+  text-align: end;
+}
+.cell-unit--price-container {
+  display: flex;
+  font-size: calc(3px + 0.4vh);
+  font-weight: 600;
+  margin: 0 0 0px 2px;
+}
+#cell-unit--price--info {
+  display: inline-block;
+  width: 70%;
+  height: 10px;
+  /* font-size: 8px; */
+  /* margin: 0 0 0px 2px; */
+  /* font-weight: 600; */
+}
+#cell-unit--price {
+  width: 25%;
+  font-size: calc(3px + 0.4vh);
+  text-align: center;
+  font-weight: 600;
+}
+.cell-unit--bonus {
+  border-top: 1px solid rgb(71, 173, 204);
+  height: 15%;
+  line-height: 0.7vh;
+  font-size: calc(0.5vh + 0.33vh);
+  padding: 1% 0 0 1%;
+  font-weight: 600;
+  text-align: start;
+}
+.cell-unit--bonus span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Контрактные карты */
+.cell-contract {
+  width: 100%;
+  height: 10px;
+}
+.cell-contract-btn {
+  font-size: 6px;
+  display: none;
+  margin: auto;
+}
+#cell-4-unit,
+#cell-33-unit,
+#cell-22-unit {
+  height: 4vh;
+  width: 4vh;
+  margin: 3% auto 0 auto;
+  background: url(../img/NPS/blacksmith.png);
+  background-size: cover;
+
+  }
+  #cell-14-unit {
+    height: 4vh;
+    width: 4.1vh;
+    margin: 8% auto 0 auto;
+    background: url(../img/NPS/clan.png);
+    background-size: cover;
+    }

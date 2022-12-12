@@ -1,0 +1,158 @@
+#select-players-log:hover {
+  cursor: pointer;
+  animation: select_log_hover 2s forwards;
+}
+
+.card-figure-img-min:hover,
+.card-figure-img:hover {
+  animation: select_card_hover 1.5s forwards;
+}
+
+.show-card-top-bottom {
+  animation: show_card_top_bottom 1.5 forwards;
+}
+.show-card-left {
+  animation: show_card_left 1.5 forwards;
+}
+.show-card-right {
+  animation: show_card_right 1.5 forwards;
+}
+.end-turn img:hover, .end-turn:hover > .end-turn img {
+  animation: buttonEndTurnAnimation 3s forwards;
+}
+.scale-avatar {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(8);
+}
+.interface-hidden {
+animation: animHiddenInterface 2s forwards;
+}
+.interface-show {
+  animation: animShowInterface 2s forwards;
+  }
+.take-card-event {
+animation:animation_take_card_event 2s cubic-bezier(0.2, 0.5, 0.5 ,1.0) forwards;
+}
+@keyframes animation_take_card_event {
+  0% {
+    left: 30%;
+    top: 30%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    left: 75%;
+    top: 52%;
+    transform: translate(-50%, -50%) rotate(90deg) scale(1.8);
+  }
+}
+@keyframes select_log_hover {
+  100% {
+    border: 0;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 15px rgb(53 146 231 / 75%);
+    margin-left: 50px;
+  }
+}
+@keyframes select_card_hover {
+  100% {
+    transform: scale(3);
+  }
+}
+
+@keyframes show_card_top_bottom {
+  100% {
+    position: fixed;
+    z-index: 4;
+    margin: 0;
+    left: 41%;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(4);
+    border: 0;
+    border-radius: 5%;
+    box-shadow: 0 0 7px 1px rgb(20 20 20);
+  }
+}
+@keyframes show_card_left {
+  100% {
+    position: fixed;
+    z-index: 4;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(4) rotate(22.1deg);
+    border: 0;
+    border-radius: 5%;
+    box-shadow: 0 0 7px 1px rgb(20 20 20);
+  }
+}
+@keyframes show_card_right {
+  100% {
+    position: fixed;
+    z-index: 4;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(4) rotate(-22.1deg);
+    border: 0;
+    border-radius: 5%;
+    box-shadow: 0 0 7px 1px rgb(20 20 20);
+  }
+}
+@keyframes buttonEndTurnAnimation{
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+  80% {
+    transform: rotate(359deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes animPlayerColorBlue {
+  0% {box-shadow: 20px 0px 20px -10px #1c17e6}
+  50% {box-shadow: 15px 0px 20px -12px #1c17e6}
+  100% {box-shadow: 20px 0px 20px -10px #1c17e6}
+}
+@keyframes animPlayerColorGreen {
+  0% {box-shadow: 20px 0px 20px -10px #198d16}
+  50% {box-shadow: 15px 0px 20px -12px #198d16}
+  100% {box-shadow: 20px 0px 20px -10px #198d16}
+}
+@keyframes animPlayerColorPurple {
+  0% {box-shadow: 20px 0px 20px -10px #c211d6}
+  50% {box-shadow: 15px 0px 20px -12px #c211d6}
+  100% {box-shadow: 20px 0px 20px -10px #c211d6}
+}
+@keyframes animPlayerColorYellow {
+  0% {box-shadow: 20px 0px 20px -10px #f2ff00d9}
+  50% {box-shadow: 15px 0px 20px -12px #f2ff00d9}
+  100% {box-shadow: 20px 0px 20px -10px #f2ff00d9}
+}
+@keyframes animHiddenInterface {
+  0% {
+  margin-right: 0;
+  }
+100% {
+margin-right: -110vh;
+}
+}
+@keyframes animShowInterface {
+  0% {
+margin-right: -110vh;
+  }
+100% {
+margin-right: 0;
+}
+}

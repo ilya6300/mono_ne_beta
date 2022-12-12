@@ -1,0 +1,45 @@
+#container-player-card {
+display: none;
+position: absolute;
+z-index: 5;
+margin: 0;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: 1px solid red;
+width: 1000px;
+height: 550px;
+}
+.container-player-card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+.show-card-norm {
+    position: relative;
+    cursor: pointer;
+    transform: scale(2);
+    box-shadow: 0 0 6px 1px #6e6565;
+    margin: 55px 45px;
+    border: 0;
+  }
+  .show-card-transform {
+    background: whitesmoke;
+    position: relative;
+    cursor: pointer;
+    width: 85px;
+    height: 122px;
+    /* border: 1px solid; */
+    transform: scale(2);
+    box-shadow: 0 0 6px 1px #6e6565;
+    margin: 55px 45px;
+
+  }
+  #container-player-card__closed {
+    cursor: pointer;
+    position: absolute;
+    width: 32px;
+    right: -64px;
+    top: -32px;
+    filter: drop-shadow(3px 5px 5px rgb(0, 174, 255));
+  }

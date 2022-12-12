@@ -1,0 +1,98 @@
+#cheat-panel {
+    z-index: 999;
+    position: absolute;
+    background: rgba(27, 27, 27, 0.884);
+    color: aliceblue;
+    width: 850px;
+    height: 364px;
+    line-height: 150%;
+    padding: 25px 10px;
+    bottom: 125%;
+    /* left: -345%; */
+}
+#btn-cheat-panel {
+
+z-index: 998;
+font-size: calc(0.9vh + 0.7vh);
+font-weight: 500;
+width: 160px;
+padding: 0.3vh;
+}
+.cheat-panel--container {
+    display: flex;
+}
+.cheat-panel-column-1,.cheat-panel-column-2,.cheat-panel-column-3 {
+    width: 275px;
+}
+.cheat-panel-ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-end
+
+}
+.cheat-panel-h2 {
+    text-align: center;
+}
+.cheat-panel-ul-title {
+    display: block;
+    text-align: center;
+    margin: 20px auto 5px auto;
+}
+.cheat-panel-li-span {
+    text-align: start;
+}
+/* Кубик */
+
+
+#cheat-panel--min-btn {
+    margin-left: 20px;
+}
+#cheat-panel--max-btn {
+    margin-left: 20px;
+}
+#cheat-panel--get-attribute-cell {
+    margin: 125px 20px 0 120px;
+}
+/* Статы */
+.cheat-panel--input {
+    width: 55px;;
+}
+#cheat-panel--attack-btn {
+    margin-left: 20px;
+    width: 20px;
+    font-weight: 700;
+}
+
+
+#cheat-panel--hp-btn {
+    margin-left: 20px;
+    width: 20px;
+    font-weight: 700;
+}
+
+
+#cheat-panel--armor-btn {
+    margin-left: 20px;
+    width: 20px;
+    font-weight: 700;
+}
+
+
+#cheat-panel--authority-btn {
+    margin-left: 20px;
+    width: 20px;
+    font-weight: 700;
+}
+
+
+#cheat-panel--gold-btn {
+    margin-left: 20px;
+    width: 20px;
+    font-weight: 700;
+}
+#cheat-panel--get-attribute-player {
+    display: block;
+    margin: 75px 10px 0 auto;
+    }

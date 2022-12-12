@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/zeroing-style.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/js-style.css">
+    <link rel="stylesheet" href="./css/cheat-panel.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Шрифты начало -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Шрифты конец -->
+    <title>Моя монополия</title>
+  </head>
+  <body class="page">
+    <div class="container">
+      <!-- Выбор количества игроков -->
+      <section class="check-player-container">
+        <div class="check-player">
+          <div class="check-player-one-container">
+            <div id="error-name"></div>
+            <h1>Укажите количество игроков и имя</h1>
+            <div class="check-player-one-select">
+              <button id="random-name-player-one">Случайное имя</button>
+              <input type="text" id="player-one-select-id" placeholder="Синий игрок введи имя"/>
+              <div id="add-player-one"></div>
+            </div>
+
+            <div class="check-player-two-select">
+              <button id="random-name-player-two">Случайное имя</button>
+              <input type="text" id="player-two-select-id" placeholder="Зелёный игрок введи имя"/>
+              <div id="add-player-two"></div>
+            </div>
+
+            <div class="check-player-three-select">
+              <button id="random-name-player-three">Случайное имя</button>
+              <input type="text" id="player-three-select-id" placeholder="Фиолетовый игрок введи имя"/>
+              <div id="add-player-three"></div>
+            </div>
+
+            <div class="check-player-four-select">
+              <button id="random-name-player-four">Случайное имя</button>
+              <input type="text" id="player-four-select-id" placeholder="Жёлтый игрок введи имя"/>
+              <div id="add-player-four"></div>
+            </div>
+          </div>
+          <button id="test-button-begin">Перейти к выбору фигурок</button>
+        </div>
+      </section>
+      <!-- Выбор фигурки начало -->
+      <section id="select-players">
+        <div class="collection-figure-conteiner">
+          <div class="card-figure min" id="vulkanClass">
+            <span class="card-figure-info">Гончая. Вулкан</span
+            ><img
+              class="card-figure-img-min"
+              id="vulkan"
+              src="./img/vulkan.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="archerClass">
+            <span class="card-figure-info">Лучница</span
+            ><img
+              class="card-figure-img"
+              id="archer"
+              src="./img/archer.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="megikClass">
+            <span class="card-figure-info">Мэджик</span
+            ><img
+              class="card-figure-img"
+              id="megik"
+              src="./img/megik.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="sniperClass">
+            <span class="card-figure-info">Снайпер</span
+            ><img
+              class="card-figure-img"
+              id="sniper"
+              src="./img/sniper.png"
+              alt=""
+            />
+          </div>
+
+          <div class="card-figure min" id="cerberClass">
+            <span class="card-figure-info">Гончая.</span
+            ><img
+              class="card-figure-img-min"
+              id="cerber"
+              src="./img/cerber.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="dragonClass">
+            <span class="card-figure-info">Дракон</span
+            ><img
+              class="card-figure-img"
+              id="dragon"
+              src="./img/dragon.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="gargulyaClass">
+            <span class="card-figure-info">Гаргулья</span
+            ><img
+              class="card-figure-img"
+              id="gargulya"
+              src="./img/gargulya.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="silvana1Class">
+            <span class="card-figure-info">Сильвана</span
+            ><img
+              class="card-figure-img"
+              id="silvana1"
+              src="./img/silvana1.png"
+              alt=""
+            />
+          </div>
+
+          <div class="card-figure min" id="hawkClass">
+            <span class="card-figure-info">Орёл</span
+            ><img
+              class="card-figure-img-min"
+              id="hawk"
+              src="./img/hawk.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="silvana2Class">
+            <span class="card-figure-info">Сильвана</span
+            ><img
+              class="card-figure-img"
+              id="silvana2"
+              src="./img/silvana2.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="verwolfClass">
+            <span class="card-figure-info">Оборотень</span
+            ><img
+              class="card-figure-img"
+              id="verwolf"
+              src="./img/verwolf.png"
+              alt=""
+            />
+          </div>
+          <div class="card-figure" id="wariorClass">
+            <span class="card-figure-info">Воин</span
+            ><img
+              class="card-figure-img"
+              id="warior"
+              src="./img/warior.png"
+              alt=""
+            />
+          </div>
+
+          <div class="card-figure min" id="violetClass">
+            <span class="card-figure-info">Фиолетовый</span
+            ><img
+              class="card-figure-img-min"
+              id="violet"
+              src="./img/violet.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="select-players-log"></div>
+        <div id="test-confirm-select">Подтвердите выбор</div>
+      </section>
+      <!-- Выбор фигурки конец -->
+      <section class="overlapping-box hidden"></section>
+      <section class="overlapping-box-opasity hidden"></section>
+      <!-- Контейнер битвы -->
+      <section class="cell-attack-container hidden">  
+        <div id="cell-attack-container--cell-name">Название атакующий карты</div>
+        <div class="cell-attack-container--stat-player--and--cell">
+          <div class="cell-attack-container-player">
+            <div>
+              <div id="cell-attack-container-player-name">Илья</div>
+            </div>
+            <div>
+              <span class="player-interface-gold-span">Золота: </span>
+              <div id="cell-attack-container-player-gold">4500</div>
+            </div>
+            <div>
+              <span class="player-interface-attack-span">Атака: </span>
+              <div id="cell-attack-container-player-attack">8</div>
+            </div>
+            <div>
+              <span class="player-interface-hp-span">Здоровья: </span>
+              <div id="cell-attack-container-player-hp">11</div>
+            </div>
+            <div>
+              <span class="player-interface-armor-span">Броня: </span>
+              <div id="cell-attack-container-player-armor">3</div>
+            </div>
+            <div>
+              <span class="player-interface-authority-span">Влияние: </span>
+              <div id="cell-attack-container-player-authority">1</div>
+            </div>
+          </div>
+          <div class="vs">Против</div>
+          <div class="cell-attack-container-cell">
+          <div class="cell-attack-container-cell-name">
+            <span class="cell-interface-gold-span">Владелец: </span>
+            <div id="cell-attack-container-cell-name">Неизвестный</div>
+          </div>
+          <div>
+            <div >Цена:</div>
+            <div id="cell-attack-container-cell-gold-price">4500</div>
+          </div>
+          <div>
+            <span class="cell-interface-attack-span">Атака: </span>
+            <div id="cell-attack-container-cell-attack">8</div>
+          </div>
+          <div>
+            <span class="cell-interface-hp-span">Здоровья: </span>
+            <div id="cell-attack-container-cell-hp">11</div>
+          </div>
+                    <div class="cell-interface-armor-container">
+            <span class="cell-interface-armor-span">Броня: </span>
+            <div id="cell-attack-container-cell-armor">11</div>
+          </div>
+          <div>
+            <span class="cell-interface-authority-span">Влияние: </span>
+            <div id="cell-attack-container-cell-authority">0</div>
+          </div>
+          <div>
+            <span class="cell-interface-authority-span">Бонус клетки: </span>
+            <div id="cell-attack-container-cell-bonus">0</div>
+          </div>
+        </div>
+        </div>
+        <div class="cell-attack-nav">
+          <button id="cell-attack-sale-cell">Купить</button>
+          <button id="cell-attack-attack-cell">Атаковать</button>
+          <button id="cell-attack-exit-cell">Выйти из битвы</button>          
+        </div>
+        <div id="cell-attack-container-log"></div>
+      </section>
+      <!-- Контейнер карты контракта -->
+      <section class="cell-contract-container hidden">  
+        <div id="cell-attack-container--cell-name">Название атакующий карты</div>
+        <div class="cell-contract-column">
+        <div class="cell-attack-container--stat-player--and--cell">
+          <div class="cell-attack-container-player">
+            <div>
+              <div id="cell-attack-container-player-name">Илья</div>
+            </div>
+            <div>
+              <span class="player-interface-gold-span">Золота: </span>
+              <div id="cell-attack-container-player-gold">4500</div>
+            </div>
+            <div>
+              <span class="player-interface-attack-span">Атака: </span>
+              <div id="cell-attack-container-player-attack">8</div>
+            </div>
+            <div>
+              <span class="player-interface-hp-span">Здоровья: </span>
+              <div id="cell-attack-container-player-hp">11</div>
+            </div>
+            <div>
+              <span class="player-interface-armor-span">Броня: </span>
+              <div id="cell-attack-container-player-armor">3</div>
+            </div>
+            <div>
+              <span class="player-interface-authority-span">Влияние: </span>
+              <div id="cell-attack-container-player-authority">1</div>
+            </div>
+          </div>
+          </div>
+          <div class="cell-contract-column-2">
+            <div class="cell-contract-column-2__img"></div>
+            <div>
+              <span class="cell-interface-authority-span">Бонус наёмника: </span>
+              <div id="cell-contarct-container-cell-bonus"></div>
+            </div>
+          </div>
+        </div>
+        <button id="btn-hireling">Нанять</button>
+        <button id="btn-hireling_closed">Закрыть</button>
+          </section>
+          <!-- Бонусы за круг -->
+          <section class="container-bonus-round hidden" >
+            <div id="round-start-player-log">Поздравляю вы прошли старт 105 раз! <br> Выбери свой подарок!</div>
+            <ul>
+              <li>+ 1 к атаке <button id="round-start-player-span-attack" class="round-start-player-span">выбрать</button></li>
+              <li class="hp-round">+ 2 к здоровью <button id="round-start-player-span-hp" class="round-start-player-span">выбрать</button></li>
+              <li class="authority-round">+ 1 к влиянию <button id="round-start-player-span-authority" class="round-start-player-span">выбрать</button></li>
+              <li class="gold-round">+ 2000 золота, разово <button id="round-start-player-span-gold" class="round-start-player-span">выбрать</button></li>
+            </ul>
+          </section>
+          <!-- Простые события -->
+          <section class="conatiner-simple-event hidden">
+            <div class="container-simple-event-interior">
+            <ul>
+              <li id="simple-event-title">Усталость</li>
+              <li id="simple-event-text">Ты смотришь Куплинова</li>
+            </ul>
+            <button id="simple-event-btn">Выполнить событие</button>
+          </div>
+          </section>
+          <!-- Турнир -->
+      <section class="tournament">
+        <h1 class="tournament__h1">Турнирная арена.</h1>
+        <h2 class="tournament__h2">Зарегистрировавшись за 2000 золотых, есть вероятность 50% получить +1 к характеристики влияние</h2>
+        <div class="tournament_bit__container">
+          <p>Вы хотите испытать удачу и зарегистрироваться за 2000?</p>
+        <button id="tournament_btn__bit">Заплатить 2000</button>
+      </div>
+      <div class="tournament_exit__container">
+        <p>Отказаться от участия</p>
+      <button id="tournament_btn__exit">Выход</button>
+    </div>
+    <div id="tournament_log"></div>
+      </section>
+      <section id="container-player-card">
+<div class="container-player-card-flex"></div>
+<img id="container-player-card__closed" src="./img/icon/cross.png" alt=""><span>Закрыть</span>
+      </section>
+      <!-- Контейнер игрового поля -->
+      <section class="game-log-container">
+        <section class="game-container">
+          <div class="empty-left-container"></div>
+          <div class="game-field">
+            <div id="player-1"></div>
+            <div id="player-2"></div>
+            <div id="player-3"></div>
+            <div id="player-4"></div>
+            <section class="game-field-rows-top">
+              <div class="card-corner" id="cell-1-start">
+                <div class="cell-1-start">Старт!</div>
+              </div>
+              <div class="card-top-bottom-container">
+                <div class="cell-2 card-top-bottom" id="cell-2">
+                  <div class="cell-name">Забытое поселение</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-2-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-2-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-2-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-2-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-2-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-2-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-2-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к здоровью
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-3 card-top-bottom" id="cell-3">
+                  <div class="cell-name">Старый торговец</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-3-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-3-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-3-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-3-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-3-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-3-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-3-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+150</span> к золоту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-4 card-top-bottom" id="cell-4">
+                  <div class="cell-name">Кузнец. Тяжёлая броня.</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-4-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-4-unit"></div>
+                    <div class="cell-contract"><button id="cell-4-contract" class="cell-contract-btn">Разорвать контракт</button></div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-4-unit--price--info"
+                      >
+                        Цена найма:
+                      </div>
+                      <div id="cell-4-unit--price">250</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+20</span> к броне, <br>
+                      <span>+2</span> к здоровью
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-5 card-top-bottom" id="cell-5">
+                  <div class="cell-name">Покои вожака</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-5-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-5-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-5-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-5-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-5-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-5-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-5-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к авторитету
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-6 card-top-bottom" id="cell-6">
+                  <div class="cell-name">Земля ополченцев</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-6-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-6-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-6-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-6-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-6-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-6-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-6-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к атаке
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-7 card-top-bottom" id="cell-7">
+                  <h1 class="simple-event-text">Событие</h1>
+                </div>
+              </div>
+              <div class="card-top-bottom-container">
+                <div class="cell-8 card-top-bottom" id="cell-8">
+                  <div class="cell-name">Роща шамана</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-8-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-8-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-8-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-8-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-8-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-8-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-8-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к здоровью
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-9 card-top-bottom" id="cell-9">
+                  <div class="cell-name">Рудник</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-9-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-9-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-9-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-9-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-9-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-9-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-9-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+250</span> к золоту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-corner" id="cell-10">
+                <div class="cell-10">Арена. Турнир.</div>
+                <img src="./img/icon/tournament.png" alt="">
+              </div>
+              <div class="simple-event-object"><span> Событие</span></div>
+              <div class="simple-event-object2"><span> Событие</span></div>
+              <div class="simple-event-object3"><span> Событие</span></div>
+              <div class="simple-event-object4"><span> Событие</span></div>
+            </section>
+            <section class="game-field-rows-center">
+              <div class="game-field-rows-center-column-left">
+                <div class="card-left-right-container">
+                  <div class="cell-36 card-left" id="cell-36">
+                    <div class="cell-name">Святилище королевства</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-36-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-36-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-36-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-36-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-36-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-36-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-36-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+3</span> к авторитету
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="cell-35 card-left" id="cell-35">
+                    <h1 class="simple-event-text">Событие</h1>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="cell-34 card-left" id="cell-34">
+                    <div class="cell-name">Казармы королевской армии</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-34-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-34-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-34-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-34-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-34-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-34-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-34-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+3</span> к атаке
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="cell-33 card-left" id="cell-33">
+                    <div class="cell-name">Кузнец-оружейник.</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-33-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-33-unit"></div>
+                      <div class="cell-contract"><button id="cell-33-contract" class="cell-contract-btn">Разорвать контракт</button></div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-33-unit--price--info"
+                        >
+                          Цена найма:
+                        </div>
+                        <div id="cell-33-unit--price">300</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+3</span> к атаке <br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="cell-32 card-left" id="cell-32">
+                    <div class="cell-name">Королевский горнизон</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-32-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-32-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-32-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-32-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-32-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-32-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-32-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+2</span> к авторитету
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="cell-31 card-left" id="cell-31">
+                    <h1 class="simple-event-text">Событие</h1>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="cell-30 card-left" id="cell-30">
+                    <div class="cell-name">Святилище королевства</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-30-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-30-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-30-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-30-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-30-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-30-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-30-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+2</span> к здоровью
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="cell-29 card-left" id="cell-29">
+                    <div class="cell-name">Королевский горнизон</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-29-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-29-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-29-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-29-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-29-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-29-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-29-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+2</span> к атаке
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="game-field-rows-center-column-center">
+                <div class="button-container">
+                  <button class="rollButton" id="rollButton">
+                    Бросить кубики<img src="./img/icon/roll.png" alt="" />
+                  </button>
+                  <button class="end-turn deactivation" id="end-turn">
+                    Завершить ход<img src="./img/icon/clock.png" alt="" />
+                  </button>
+                  <div id="cheat-panel" class="hidden">
+                    <h2 class="cheat-panel-h2">Добро пожаловать в чит-панель!</h2>
+                    <div class="cheat-panel--container">
+                    <div class="cheat-panel-column-1">
+                    <ul class="cheat-panel-ul"><span class="cheat-panel-ul-title"> Минимальный и максимальный диапазон броска кубиков</span>
+                      <li>Min: <input class="cheat-panel--input" id="cheat-panel--min-number" type="number" min="1" max="72"><button id="cheat-panel--min-btn">Ok!</button></li>
+                      <li>Max: <input class="cheat-panel--input" id="cheat-panel--max-number" type="number" min="1" max="72"><button id="cheat-panel--max-btn">Ok!</button></li>
+                    </ul>
+                    <ul class="cheat-panel-ul"><span class="cheat-panel-ul-title">Добавить характеристики</span>
+                      <li>Атака <input class="cheat-panel--input" id="cheat-panel--attack-number" type="number"><button id="cheat-panel--attack-btn">+</button></li>
+                      <li>Здоровье <input class="cheat-panel--input" id="cheat-panel--hp-number" type="number" min="1"><button id="cheat-panel--hp-btn">+</button></li>
+                      <li>Броня <input class="cheat-panel--input" id="cheat-panel--armor-number" type="number" min="1"><button id="cheat-panel--armor-btn">+</button></li>
+                      <li>Влияние <input class="cheat-panel--input" id="cheat-panel--authority-number" type="number" min="1"><button id="cheat-panel--authority-btn">+</button></li>
+                      <li>Золото <input class="cheat-panel--input" id="cheat-panel--gold-number" type="number" min="1"><button id="cheat-panel--gold-btn">+</button></li>
+                    </ul>
+                  </div>
+                  <div class="cheat-panel-column-2">
+                    <ul class="cheat-panel-ul"><span class="cheat-panel-ul-title">Получить параметры игрока</span>
+                      <li>Атака <input class="cheat-panel--input" id="cheat-panel--attack-get" type="text"></li>
+                      <li>Здоровье <input class="cheat-panel--input" id="cheat-panel--hp-get" type="text"></li>
+                      <li>Броня <input class="cheat-panel--input" id="cheat-panel--armor-get" type="text"></li>
+                      <li>Влияние <input class="cheat-panel--input" id="cheat-panel--authority-get" type="text"></li>
+                      <li>Золота <input class="cheat-panel--input" id="cheat-panel--gold-get" type="text"></li>
+                      <li>Золота за круг <input class="cheat-panel--input" id="cheat-panel--start-gold-get" type="text"></li>
+                    </ul>
+                    <button id="cheat-panel--get-attribute-player">Получить параметры</button>
+                  </div>
+                  <!--  -->
+                  <div class="cheat-panel-column-3">
+                    <ul class="cheat-panel-ul"><span class="cheat-panel-ul-title">Получить параметры клетки</span>
+                      <li>Владелец <input class="cheat-panel--input" id="cheat-panel--master-get-cell" type="text"></li>
+                      <li>Атака <input class="cheat-panel--input" id="cheat-panel--attack-get-cell" type="text"></li>
+                      <li>Здоровье <input class="cheat-panel--input" id="cheat-panel--hp-get-cell" type="text"></li>
+                      <li>Влияние <input class="cheat-panel--input" id="cheat-panel--authority-get-cell" type="text"></li>
+                    </ul>
+                    <button id="cheat-panel--get-attribute-cell">Получить параметры</button>
+                  </div>
+                  </div>
+                  </div>
+                  <button id="btn-cheat-panel" class="hidden">Чит-панель</button>
+                  <button id="show-interface">Скрыть интерфейс</button>
+                </div>
+                <div id="log" class="log-container"></div>
+              </div>
+              <div class="game-field-rows-center-column-right">
+                <div class="card-left-right-container">
+                  <div class="card-right cell-11" id="cell-11">
+                    <div class="cell-name">Тренировочный лагерь</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-11-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-11-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-11-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-11-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-11-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-11-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-11-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+1</span> к атаке
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="card-right cell-12" id="cell-12">
+                    <h1 class="simple-event-text">Событие</h1>
+                  </div>
+                </div>
+                <div class="card-left-right-container">
+                  <div class="card-right cell-13" id="cell-13">
+                    <div class="cell-name">Рынок около арены</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-13-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-13-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-13-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-13-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-13-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-13-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-13-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+250</span> к золоту
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container">
+                  <div class="card-right cell-14" id="cell-14">
+                    <div class="cell-name">Знамяносец</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-14-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-14-unit"></div>
+                      <div class="cell-contract"><button id="cell-14-contract" class="cell-contract-btn">Разорвать контракт</button></div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-14-unit--price--info"
+                        >
+                          Цена найма:
+                        </div>
+                        <div id="cell-14-unit--price">150</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+1</span> к авторитету <br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container">
+                  <div class="card-right cell-15" id="cell-15">
+                    <div class="cell-name">Покои чемпиона арены</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-15-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-15-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-15-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-15-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-15-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-15-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-15-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+1</span> к авторитету
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="card-right cell-16" id="cell-16">
+                    <div class="cell-name">Дом знахаря</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-16-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-16-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-16-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-16-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-16-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-16-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-16-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+1</span> к здоровью
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="card-right cell-17" id="cell-17">
+                    <h1 class="simple-event-text">Событие</h1>
+                  </div>
+                </div>
+                <div class="card-left-right-container" >
+                  <div class="card-right cell-18" id="cell-18">
+                    <div class="cell-name">Площадь славы</div>
+                    <div class="cell-master">
+                      Владелец:
+                      <div id="cell-18-master">Нейтральный</div>
+                    </div>
+                    <div class="cell-unit-container">
+                      <div id="cell-18-unit"></div>
+                      <div class="cell-unit-container--stat">
+                        <div
+                          class="cell-unit-container--stat---attack---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---attack---stat"
+                          id="cell-18-unit-container--stat---attack---stat"
+                        >
+                          2
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---hp---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---hp---stat"
+                          id="cell-18-unit-container--stat---hp---stat"
+                        >
+                          7
+                        </div>
+                        <div
+                          class="cell-unit-container--stat---authority---icon"
+                        ></div>
+                        <div
+                          class="cell-unit-container--stat---authority---stat"
+                          id="cell-18-unit-container--stat---authority---stat"
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div class="cell-unit--price-container">
+                        <div
+                          class="cell-unit--price--info"
+                          id="cell-18-unit--price--info"
+                        >
+                          Цена покупки:
+                        </div>
+                        <div id="cell-18-unit--price">550</div>
+                      </div>
+                      <div class="cell-unit--bonus">
+                        Бонус: <span>+1</span> к авторитету
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="game-field-rows-bottom">
+              <div class="card-corner" id="cell-19">
+                <div class="cell-19"></div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-20 card-top-bottom" id="cell-20">
+                  <div class="cell-name">Торговый морской порт</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-20-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-20-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-20-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-20-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-20-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-20-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-20-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+500</span> к золоту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-21 card-top-bottom" id="cell-21">
+                  <div class="cell-name">Бастион стражи морского порта</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-21-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-21-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-21-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-21-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-21-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-21-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-21-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к атаке
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-22 card-top-bottom" id="cell-22">
+                  <div class="cell-name">Кузнец. Лёгкая броня</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-22-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-22-unit"></div>
+                    <div class="cell-contract"><button id="cell-22-contract" class="cell-contract-btn">Разорвать контракт</button></div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-22-unit--price--info"
+                      >
+                        Цена найма:
+                      </div>
+                      <div id="cell-22-unit--price">200</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к атаке <br>
+                      <span>+2</span> к здоровью
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-23 card-top-bottom" id="cell-23">
+                  <div class="cell-name">Бастион стражи морского порта</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-23-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-23-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-23-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-23-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-23-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-23-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-23-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к атаке
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-24 card-top-bottom" id="cell-24">
+                  <h1 class="simple-event-text">Событие</h1>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-25 card-top-bottom" id="cell-25">
+                  <div class="cell-name">Морской военный госпиталь</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-25-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-25-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-25-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-25-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-25-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-25-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-25-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+2</span> к здоровью
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-26 card-top-bottom" id="cell-26">
+                  <div class="cell-name">Центральный морской рынок</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-26-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-26-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-26-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-26-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-26-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-26-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-26-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+550</span> к золоту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-top-bottom-container" >
+                <div class="cell-27 card-top-bottom" id="cell-27">
+                  <div class="cell-name">Цитадель морского порта</div>
+                  <div class="cell-master">
+                    Владелец:
+                    <div id="cell-27-master">Нейтральный</div>
+                  </div>
+                  <div class="cell-unit-container">
+                    <div id="cell-27-unit"></div>
+                    <div class="cell-unit-container--stat">
+                      <div
+                        class="cell-unit-container--stat---attack---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---attack---stat"
+                        id="cell-27-unit-container--stat---attack---stat"
+                      >
+                        2
+                      </div>
+                      <div class="cell-unit-container--stat---hp---icon"></div>
+                      <div
+                        class="cell-unit-container--stat---hp---stat"
+                        id="cell-27-unit-container--stat---hp---stat"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="cell-unit-container--stat---authority---icon"
+                      ></div>
+                      <div
+                        class="cell-unit-container--stat---authority---stat"
+                        id="cell-27-unit-container--stat---authority---stat"
+                      >
+                        0
+                      </div>
+                    </div>
+                    <div class="cell-unit--price-container">
+                      <div
+                        class="cell-unit--price--info"
+                        id="cell-27-unit--price--info"
+                      >
+                        Цена покупки:
+                      </div>
+                      <div id="cell-27-unit--price">550</div>
+                    </div>
+                    <div class="cell-unit--bonus">
+                      Бонус: <span>+1</span> к авторитету
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-corner" id="cell-28">
+                <div class="cell-28">Арена. Дуэли.</div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </section>
+      <!-- Контейнер интерфейса -->
+      <section class="interface-container">
+        <div class="players-interface">
+          <div class="player-1-interface">
+            <div class="player-1-interface__column_1">
+            <h2>Игрок 1</h2>
+          
+            <ul>              
+              <li class="player-interface-span">Имя: </li>
+              <li id="player-1-interface-name"  class="player-interface-inline">Илья</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота: </li>
+              <li id="player-1-interface-gold" class="player-interface-inline">4500</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Атака: </li>
+              <li id="player-1-interface-attack" class="player-interface-inline">8</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Здоровья: </li>
+              <li id="player-1-interface-hp" class="player-interface-inline">11</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Броня: </li>
+              <li id="player-1-interface-armor" class="player-interface-inline">3</dliiliv>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Влияние: </li>
+              <li id="player-1-interface-authority" class="player-interface-inline">1</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота за круг: </li>
+              <li id="player-1-interface-gold-start" class="player-interface-inline">1</li>
+            </ul>
+          </div>
+          <div class="player-1-interface__column_2 player_interface__column___2">
+            <div id="player-1-interface__avatar"></div>
+            <div id="player-1-interface__card"></div>
+          </div>
+          </div>
+          <div class="player-2-interface">
+
+            <div class="player-2-interface__column_1">
+              <h2>Игрок 2</h2>
+            <ul>
+              <li class="player-interface-span">Имя: </li>
+              <li id="player-2-interface-name" class="player-interface-inline">Илья</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота: </li>
+              <li id="player-2-interface-gold" class="player-interface-inline">4500</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Атака: </li>
+              <li id="player-2-interface-attack" class="player-interface-inline">8</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Здоровья: </li>
+              <li id="player-2-interface-hp" class="player-interface-inline">11</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Броня: </li>
+              <li id="player-2-interface-armor" class="player-interface-inline">3</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Влияние: </li>
+              <li id="player-2-interface-authority" class="player-interface-inline">1</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота за круг: </li>
+              <li id="player-2-interface-gold-start" class="player-interface-inline">1</li>
+            </ul>
+          </div>
+          <div class="player-2-interface__column_2 player_interface__column___2">
+            <div id="player-2-interface__avatar"></div>
+            <div id="player-2-interface__card"></div>
+          </div>
+          </div>
+          <div class="player-3-interface">
+ 
+            <div class="player-3-interface__column_1">
+              <h2>Игрок 3</h2>
+            <ul>
+              <li class="player-interface-span">Имя: </li>
+              <li id="player-3-interface-name" class="player-interface-inline">Илья</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота: </li>
+              <li id="player-3-interface-gold" class="player-interface-inline">4500</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Атака: </li>
+              <li id="player-3-interface-attack" class="player-interface-inline">8</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Здоровья: </li>
+              <li id="player-3-interface-hp" class="player-interface-inline">11</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Броня: </li>
+              <li id="player-3-interface-armor" class="player-interface-inline">3</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Влияние: </li>
+              <li id="player-3-interface-authority" class="player-interface-inline">1</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота за круг: </li>
+              <li id="player-3-interface-gold-start" class="player-interface-inline">1</li>
+            </ul>
+          </div>
+          <div class="player-3-interface__column_2 player_interface__column___2">
+            <div id="player-3-interface__avatar"></div>
+            <div id="player-3-interface__card"></div>
+          </div>
+          </div>
+          <div class="player-4-interface">            
+            <div class="player-4-interface__column_1">
+              <h2>Игрок 4</h2>
+            <ul>
+              <li class="player-interface-span">Имя: </li>
+              <li id="player-4-interface-name" class="player-interface-inline">Илья</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота: </li>
+              <li id="player-4-interface-gold" class="player-interface-inline">4500</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Атака: </li>
+              <li id="player-4-interface-attack" class="player-interface-inline">8</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Здоровья: </li>
+              <li id="player-4-interface-hp" class="player-interface-inline">11</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Броня: </li>
+              <li id="player-4-interface-armor" class="player-interface-inline">3</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Влияние: </li>
+              <li id="player-4-interface-authority" class="player-interface-inline">1</li>
+            </ul>
+            <ul>
+              <li class="player-interface-span">Золота за круг: </li>
+              <li id="player-4-interface-gold-start" class="player-interface-inline">1</li>
+            </ul>
+          </div>
+          <div class="player-4-interface__column_2 player_interface__column___2">
+            <div id="player-4-interface__avatar"></div>
+            <div id="player-4-interface__card"></div>
+          </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <script src="./js/app.js" type="module"></script> 
+    <script src="./js/cell.js" type="module"></script>
+    <script src="./js/interaction.js" type="module"></script>
+    <script src="./js/card-event.js" type="module"></script>
+  </body>
+</html>

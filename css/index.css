@@ -1,0 +1,797 @@
+.page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+.button-container {
+  position: relative;
+  top: 51vh;
+  display: flex;
+  flex-direction: row;
+  /* gap: 1vw; */
+  justify-content: space-around;
+
+
+}
+
+.rollButton {
+  cursor: pointer;
+  font-size: calc(0.9vh + 0.7vh);
+  font-weight: 500;
+width: 160px;
+padding: 0.3vh;
+
+}
+.rollButton img {
+  display: none;
+  width: 74px;
+  position: absolute;
+  bottom: -20px;
+  right: -85px;
+}
+.end-turn {
+  cursor: pointer;
+  font-size: calc(0.9vh + 0.7vh);
+  font-weight: 500;
+width: 160px;
+padding: 0.3vh;
+}
+.end-turn img {
+  display: none;
+  width: 42px;
+  position: absolute;
+  bottom: -10px;
+  right: -55px;
+}
+#show-interface {
+  cursor: pointer;
+  font-size: calc(0.9vh + 0.7vh);
+  font-weight: 500;
+width: 160px;
+padding: 0.3vh;
+  }
+
+.hidden {
+  display: none !important;
+}
+.overlapping-box {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: #6e6e6e61;
+}
+.overlapping-box-opasity {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+.conatiner-simple-event {
+  position: absolute;
+  z-index: 5;
+  margin: 0;
+  width: 45vh;
+  height: 30vh;
+  border-radius: 5%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 8px 2px black;
+}
+.container-simple-event-interior {
+  position: relative;
+  height: 100%;
+}
+#simple-event-title {
+  text-align: center;
+  padding: 5%;
+  font-size: 30px;
+  font-weight: 700;
+}
+#simple-event-text {
+  text-align: center;
+  padding: 5%;
+  font-size: 20px;
+  font-weight: 500;
+}
+#simple-event-btn {
+position: absolute;
+left: 50%;
+transform: translate(-50%);
+bottom: 5%;
+display: block;
+margin: auto;
+width: 155px;
+height: 45px;
+}
+.container-bonus-round {
+  position: absolute;
+  z-index: 5;
+  margin: 0;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 2%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(44, 43, 43, 0.966);
+}
+#round-start-player-log {
+  color: rgba(240, 112, 112, 0.925);
+  text-align: center;
+  font-size: 20px;
+  margin: 20px;
+}
+.container-bonus-round ul {
+  margin: 50px 70px;
+  font-size: 18px;
+  line-height: 180%;
+  color: rgb(255, 255, 255);
+}
+.hp-round {
+  color: rgba(255, 0, 0, 0.918);
+}
+.authority-round {
+  color: rgba(95, 240, 38, 0.863);
+}
+.gold-round {
+  color: yellow;
+}
+.round-start-player-span, 
+.round-start-player-span, 
+.round-start-player-span, 
+.round-start-player-span {
+display: inline-block;
+/* background: rgb(129, 187, 238); */
+cursor: pointer;
+/* color: aliceblue; */
+width: 90px;
+height: 30px;
+text-align: center;
+border: 0px solid;
+}
+.round-start-player-span:hover {
+  background: rgb(218, 194, 125);
+}
+#round-start-player-span-attack {
+  margin-left: 110px;
+}
+#round-start-player-span-hp {
+  margin-left: 76px;
+}
+#round-start-player-span-authority {
+  margin-left: 82px;
+}
+#round-start-player-span-gold {
+  margin-left: 27px;
+}
+.tournament {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  margin: 0;
+  width: 50vw;
+  height: 50vh;
+  border: 10px solid rgba(238, 11, 11, 0.822);
+  border-radius: 5%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: whitesmoke;
+}
+.tournament__h1 {
+  text-align: center;
+  margin: 25px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.tournament__h2 {
+  padding: 30px;
+}
+.tournament_bit__container {
+  display: inline-block;
+  width: 450px;
+  margin-left: 30px;
+}
+#tournament_btn__bit,
+#tournament_btn__exit {
+  margin-top: 15px;
+  width: 165px;
+  height: 28px;
+}
+.tournament_exit__container {
+  display: inline-block;
+  width: 200px;
+}
+#tournament_log {
+  margin: 30px;
+}
+.container {
+  /* margin-top: 5px; */
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+.game-log-container {
+  /* width: 80%; */
+}
+.interface-container {
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+  border: 1px solid;
+}
+.game-container {
+  display: flex;
+}
+.log-container {
+  z-index: 0;
+  width: 72vh;
+  height: 17vh;
+  border: 2px solid;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  margin: 3px 8px;
+  padding: 5px;
+  overflow-y: scroll;
+}
+/* Разметка для карт */
+.empty-left-container {
+  /* width: 13.5%; */
+}
+.game-field {
+  position: relative;
+}
+.game-field-rows-top,
+.game-field-rows-bottom {
+  width: 100%;
+  height: 13.4vh;
+  border: 1px solid;
+  display: flex;
+}
+.game-field-rows-bottom {
+  flex-direction: row-reverse;
+}
+.game-field-rows-center {
+  width: 100%;
+  height: 72.82vh;
+  /* border: 1px solid; */
+  display: flex;
+}
+
+.game-field-rows-center-column-left,
+#game-field-rows-center-column-right {
+  width: 13.4vh;
+}
+.game-field-rows-center-column-center {
+  width: 73.2vh;
+  height: 72.82vh;
+  /* border: 1px solid; */
+  position: relative;
+}
+.simple-event-text {
+  text-align: center;
+  font-size: calc(1vh + 0.7vh);
+  padding-top: 60%;
+}
+.simple-event-object4 {
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  font-size: calc(1vh + 0.7vh);
+  width: 9.1vh;
+  height: 13.2vh;
+  box-shadow: 0 0 2px 1px black;
+  border-radius: 5%;
+  left: 30%;
+  top: 30%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.simple-event-object4:hover {
+  left: 30%;
+  top: 29.5%;
+}
+.simple-event-object3 {
+  background-color: rgb(255, 255, 255);
+  /* z-index: 5; */
+  position: absolute;
+  text-align: center;
+  font-size: calc(1vh + 0.7vh);
+  width: 9.1vh;
+  height: 13.2vh;
+  box-shadow: 0 0 2px 1px black;
+  border-radius: 5%;
+  top: 30.2%;
+  left: 30.2%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.simple-event-object2 {
+  background-color: rgb(255, 255, 255);
+  /* z-index: 5; */
+  position: absolute;
+  text-align: center;
+  font-size: calc(1vh + 0.7vh);
+  width: 9.1vh;
+  height: 13.2vh;
+  box-shadow: 0 0 2px 1px black;
+  border-radius: 5%;
+  top: 30.4%;
+  left: 30.4%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.simple-event-object {
+  background-color: rgb(255, 255, 255);
+  /* z-index: 5; */
+  position: absolute;
+  text-align: center;
+  font-size: calc(1vh + 0.7vh);
+  width: 9.1vh;
+  height: 13.2vh;
+  box-shadow: 0 0 2px 1px black;
+  border-radius: 5%;
+  top: 30.6%;
+  left: 30.6%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.simple-event-object span,.simple-event-object2 span,.simple-event-object3 span,.simple-event-object4 span {
+position: relative;
+top: 40%;
+}
+/* Клетки для карт */
+
+/* Игроки */
+
+#test-button-begin {
+  position: absolute;
+  width: 230px;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 8px 20px;
+  bottom: 45px;
+  right: 45px;
+}
+#test-confirm-select {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.918);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: whitesmoke;
+  position: absolute;
+  bottom: 15%;
+  right: 23%;
+}
+#select-players-log {
+  font-size: 20px;
+  background: whitesmoke;
+  width: 640px;
+  height: 200px;
+  margin-left: 23px;
+  box-shadow: 0 0 10px 5px rgb(53 146 231);
+  border-radius: 15px;
+  display: inline-block;
+  padding: 20px 10px;
+  overflow-y: scroll;
+}
+#select-players {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.76);
+  padding: 100px 81px;
+  display: none;
+}
+.collection-figure-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 15px;
+}
+.card-figure {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  width: 150px;
+  border: 2px solid;
+  border-radius: 4%;
+  background: white;
+}
+.card-figure:hover {
+  z-index: 999;
+  position: relative;
+}
+.card-figure-img-min {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 25px 15px;
+  height: 140px;
+}
+.card-figure-img {
+  display: block;
+  margin: auto;
+  padding: 25px 15px;
+  height: 160px;
+}
+.card-figure-img-min:hover,
+.card-figure-img:hover {
+  transform: scale(3);
+  transition: all 0.4s;
+}
+.card-figure-info {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 2px solid;
+  padding: 10px 0;
+  font-family: "Merriweather", serif;
+}
+.card-figure-p {
+  border-top: 2px solid black;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  padding: 10px 0;
+}
+#player-1 {
+  z-index: 2;
+  position: fixed;
+  /* background: url(../img/violet.png) no-repeat; */
+  width: 8vh;
+  height: 10vh;
+  background-size: cover;
+  transition: all 0.4s;
+}
+#player-2 {
+  z-index: 2;
+  position: fixed;
+  top: 70px;
+  left: 15.2%;
+  /* background: url(../img/archer.png) no-repeat; */
+  width: 8vh;
+  height: 10vh;
+  background-size: cover;
+  transition: all 0.4s;
+}
+#player-3 {
+  z-index: 2;
+  position: fixed;
+  top: 70px;
+  left: 10.2%;
+  /* background: url(../img/verwolf.png) no-repeat; */
+  width: 8vh;
+  height: 10vh;
+  background-size: cover;
+  transition: all 0.4s;
+}
+#player-4 {
+  z-index: 2;
+  position: fixed;
+  top: 2%;
+  left: 13.8%;
+  /* background: url(../img/vulkan.png) no-repeat; */
+  width: 8vh;
+  height: 10vh;
+  background-size: cover;
+  transition: all 0.4s;
+}
+.select-confirm {
+  pointer-events: none;
+}
+
+/* Выбор количества игроков начало */
+.check-player-one-container {
+  position: relative;
+}
+#error-name {
+  position: relative;
+  color: rgba(212, 18, 18, 0.966);
+  font-size: 32px;
+  margin-top: -50px;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+
+.check-player-container {
+  position: absolute;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.849);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.check-player {
+  position: relative;
+  text-align: right;
+  margin: auto;
+  background: wheat;
+  width: 850px;
+  height: 490px;
+  padding: 50px 50px;
+  line-height: 60px;
+}
+.check-player h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 50px;
+}
+.check-player-one-select,
+.check-player-two-select,
+.check-player-three-select,
+.check-player-four-select {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 20px;
+  /* border: 1px solid; */
+}
+#player-one-select-id,
+#player-two-select-id,
+#player-three-select-id,
+#player-four-select-id {
+  width: 40%;
+  height: 35px;
+  font-size: 20px;
+  padding-left: 5px;
+}
+#add-player-one,
+#add-player-two,
+#add-player-three,
+#add-player-four {
+  background: url(../img/icon/add_player.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  margin-left: 25px;
+  cursor: pointer;
+}
+#random-name-player-one,
+#random-name-player-two,
+#random-name-player-three,
+#random-name-player-four {
+  padding: 0 25px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+#random-name-player-one {
+  box-shadow: 1px 5px 8px 1px blue;
+}
+#player-one-select-id {
+  box-shadow: 1px 3px 8px 0 blue;
+  border: solid 0px;
+}
+#random-name-player-two {
+  box-shadow: 1px 5px 8px 1px #198d16;
+}
+#player-two-select-id {
+  box-shadow: 1px 3px 8px 0 #198d16;
+  border: solid 0px;
+}
+#random-name-player-three {
+  box-shadow: 1px 5px 8px 1px #c211d6;
+}
+#player-three-select-id {
+  box-shadow: 1px 3px 8px 0 #c211d6;
+  border: solid 0px;
+}
+#random-name-player-four {
+  box-shadow: 1px 5px 8px 1px #f2ff00d9;
+}
+#player-four-select-id {
+  box-shadow: 1px 3px 8px 0 #f2ff00d9;
+  border: solid 0px;
+}
+#player-2,
+#player-3,
+#player-4,
+#add-player-three,
+#add-player-four {
+  display: none;
+}
+#random-name-player-two,
+#random-name-player-three,
+#random-name-player-four {
+  display: none;
+}
+#player-two-select-id,
+#player-three-select-id,
+#player-four-select-id {
+  display: none;
+}
+/* Выбор количества игроков конец */
+
+.deactivation {
+  pointer-events: none;
+  color: rgba(180, 184, 187, 0.747);
+}
+.cell-contract-container, 
+.cell-attack-container {
+  position: absolute;
+  z-index: 5;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vh;
+  height: 75vh;
+  background: whitesmoke;
+  padding: 2vh;
+}
+.cell-contract-column {
+  display: flex;
+  justify-content: space-around;
+}
+.cell-contract-column-2__img {
+  /* background: url(../img/NPS/icon-blacksmith-color.png); */
+  background-size: cover;
+width: 200px;
+height: 200px;
+}
+/* Интерфейс игроков */
+.players-interface {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.player-interface-span {
+  display: inline-block;
+  width: 105px;
+}
+.player-interface-inline {
+  display: inline-block;
+  width: 95px;
+  text-align: end;
+}
+.player_interface__column___2 {
+    display: inline-block;
+  width: 80px;
+  margin-left: 20px;
+}
+.player_interface__column___1 {
+  display: inline-block;
+  width: 215px;
+}
+.player-2-interface,
+.player-3-interface,
+.player-4-interface {
+  display: flex;
+  display: none;
+}
+.player-1-interface {
+  display: flex;
+}
+.player-1-interface__column_1,
+.player-2-interface__column_1,
+.player-3-interface__column_1,
+.player-4-interface__column_1 {
+  display: inline-block;
+}
+.player-1-interface__column_2 {
+  animation: animPlayerColorBlue 5s infinite;
+}
+.player-2-interface__column_2 {
+  animation: animPlayerColorGreen 5s infinite;
+}
+.player-3-interface__column_2 {
+  animation: animPlayerColorPurple 5s infinite;
+}
+.player-4-interface__column_2 {
+  animation: animPlayerColorYellow 5s infinite;
+}
+#player-1-interface__avatar {
+  cursor: pointer;
+  display: inline-block;
+  height: 65px;
+  width: 50px;
+  padding-top: 20px;
+}
+#player-1-interface__card {
+  cursor: pointer;
+  display: inline-block;
+  background: url(../img/icon/card_games.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+#player-2-interface__avatar {
+  cursor: pointer;
+  display: inline-block;
+  height: 65px;
+  width: 50px;
+  padding-top: 20px;
+}
+#player-2-interface__card {
+  cursor: pointer;
+  display: inline-block;
+  background: url(../img/icon/card_games.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+#player-3-interface__avatar {
+  cursor: pointer;
+  display: inline-block;
+  height: 65px;
+  width: 50px;
+  padding-top: 20px;
+}
+#player-3-interface__card {
+  cursor: pointer;
+  display: inline-block;
+  background: url(../img/icon/card_games.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+#player-4-interface__avatar {
+  cursor: pointer;
+  display: inline-block;
+  height: 65px;
+  width: 50px;
+  padding-top: 20px;
+}
+#player-4-interface__card {
+  cursor: pointer;
+  display: inline-block;
+  background: url(../img/icon/card_games.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+/* Окно боя */
+.cell-interface-armor-span {
+  display: none;
+}
+#cell-attack-container--cell-name {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 22px;
+  color: rgba(206, 27, 27, 0.877);
+}
+.cell-attack-container--stat-player--and--cell {
+  display: flex;
+  justify-content: space-between;
+}
+#cell-attack-container-player-gold,
+#cell-attack-container-player-attack,
+#cell-attack-container-player-hp,
+#cell-attack-container-player-armor,
+#cell-attack-container-player-authority,
+#cell-attack-container-cell-name,
+#cell-interface-gold-info,
+#cell-attack-container-cell-gold-price,
+#cell-attack-container-cell-attack,
+#cell-attack-container-cell-hp,
+#cell-attack-container-cell-authority {
+  display: inline;
+  text-align: end;
+}
+.cell-attack-nav {
+  width: 100%;
+  display: inline-flex;
+  margin-top: 25px;
+  justify-content: center;
+  gap: 10px;
+}
+.cell-attack-nav button {
+  width: 125px;
+  height: 28px;
+}
+#cell-attack-container-log {
+  font-size: 19px;
+  color: brown;
+  margin-top: 50px;
+}
